@@ -1,0 +1,5 @@
+# 파일별 책임 리뷰어(보너스). PR 이 이 경로를 바꾸면 담당자에게 리뷰가 자동 요청된다.
+/src/text_utils.py  @hauteville1862
+/src/math_utils.py  @Rara-rookie
+/src/date_utils.py  @datecoco
+/docs/CONTRIBUTING.md  @hauteville1862 @Rara-rookie @datecoco

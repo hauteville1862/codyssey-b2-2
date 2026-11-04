@@ -31,5 +31,5 @@
 - [협업 규칙](docs/CONTRIBUTING.md)
 - [충돌 해결 기록](docs/conflict-resolution.md)
 - [Git 트러블슈팅 기록](docs/troubleshooting-log.md)
-- [용어집](docs/glossary.md)
+- [용어집](docs/reference/glossary.md)
 - [제출물 인덱스](SUBMISSION.md)

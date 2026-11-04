@@ -4,12 +4,22 @@
 
 ## 1. 브랜치 전략(GitHub Flow) — 담당 임유현
 <!-- SEC1:START -->
-(작성 예정)
+- `main`: 항상 동작하는 상태. 직접 push 금지(Branch Protection), PR 과 승인 1명으로만 병합한다.
+- `feature/*`: 작업 하나당 브랜치 하나. main 에서 만들고 PR 병합 뒤 삭제한다.
+- 작업 흐름: 이슈 생성 → 브랜치 → 커밋 → push → PR(`Closes #이슈`) → 리뷰·반영 → 승인 → 병합
+- 우리 팀이 GitHub Flow 를 고른 이유(3줄)
+  1. main 하나만 지키면 되어 3인 팀에 규칙이 단순하다.
+  2. 모든 변경이 PR 리뷰를 거쳐 기록이 남는다.
+  3. 릴리스 주기가 없어 develop·release 브랜치가 필요 없다.
 <!-- SEC1:END -->
 
 ## 2. 브랜치 네이밍과 커밋 메시지 컨벤션 — 담당 임유현
 <!-- SEC2:START -->
-(작성 예정)
+- 브랜치: `feature/<이니셜>-<작업>` (소문자, 하이픈). 예: `feature/a-text-utils`
+- 이슈가 있으면 이니셜 앞에 번호를 붙여도 된다. 예: `feature/12-a-login` (PR·이슈를 브랜치 이름으로 찾기 쉽다)
+- 커밋: `<type>: <무엇을 했는지>`. type 은 `feat`, `fix`, `docs`, `refactor`, `test`, `chore`
+- 제목은 50자 안팎, 명령형, 끝에 마침표 없음. 무엇을 바꿨는지 대상이 드러나야 한다.
+- 금지(의미 없는 메시지): `update`, `fix`, `temp`, `wip`, `final`, `bug fix`, `edit file`
 <!-- SEC2:END -->
 
 ## 3. PR 작성 규칙 — 담당 이나현

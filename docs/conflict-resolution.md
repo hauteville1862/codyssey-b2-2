@@ -3,7 +3,43 @@
 충돌은 숨기지 않고 해결 과정을 남긴다. 충돌을 해결한 사람이 해결 커밋과 같은 PR 에서 기록한다.
 
 <!-- CONFLICT1:START -->
-(충돌 기록 #1 작성 예정)
+## 충돌 기록 #1 — 두 사람이 같은 곳(같은 hunk)을 다르게 고친 충돌
+
+### 참여자
+- 해결한 사람: 이나현(@Rara-rookie) — `feature/b-contributing-review` (PR #12)
+- 상대: 임유현(@hauteville1862) — PR #10 (`feature/a-contributing-flow`, 먼저 병합됨)
+- 기록 작성: 박경내(@datecoco), 저장소 기록(커밋)을 보고 나중에 정리함
+
+### 상황(What happened)
+- PR #10 이 먼저 main 에 병합된 뒤, 최신 main 을 `feature/b-contributing-review` 로 병합하자 충돌이 났다.
+- 충돌 파일: docs/CONTRIBUTING.md 의 `## 6. 병합 전 공통 체크리스트` 구간
+
+### 충돌 내용(Conflict markers)
+```txt
+# docs/CONTRIBUTING.md
+<!-- CHECKLIST:START -->
+<<<<<<< d87aae8 (docs: add review response time rule)
+- [ ] 리뷰어 1명 이상의 승인을 받았다
+- [ ] 리뷰 코멘트에 모두 답하거나 반영했다
+=======
+- [ ] PR 본문에 What / Why / How 와 Closes #이슈 가 있다
+- [ ] 로컬에서 실행·doctest 를 확인했다
+>>>>>>> 8aa3ea8 (Merge pull request #10 from hauteville1862/feature/a-contributing-flow)
+<!-- CHECKLIST:END -->
+```
+(위 표식은 `git show --remerge-diff 82b1c4c` 로 다시 만들어 확인한 것이다.)
+
+### 해결 과정(How)
+- 전략: **choose one(내 쪽 선택)**. 해결 커밋에는 이나현 브랜치 쪽 두 줄(리뷰 승인, 리뷰 코멘트 반영)만 남았고, main 쪽 두 줄은 들어가지 않았다.
+- 해결 커밋: `82b1c4c` (Merge branch 'main' into feature/b-contributing-review, 2026-11-04 11:36 KST)
+- 당시 터미널 명령과 출력은 남아 있지 않아 적지 않는다.
+
+### 결과(Outcome)
+- 해결 후 PR #12 가 main 에 병합됐다(병합 커밋 `1640ad2`).
+
+### 배운 점(Learnings)
+- 같은 체크리스트 구간을 여러 사람이 동시에 고치면 같은 hunk 충돌이 난다. 담당 구간을 나누거나 먼저 병합된 내용을 받은 뒤 이어 쓰면 줄일 수 있다.
+- choose one 으로 해결하면 상대 쪽 내용이 빠질 수 있으니, 버린 줄이 정말 필요 없는지 상대 작성자와 확인하는 게 좋다.
 <!-- CONFLICT1:END -->
 
 <!-- CONFLICT2:START -->

@@ -16,6 +16,7 @@
 ## 2. 브랜치 네이밍과 커밋 메시지 컨벤션 — 담당 임유현
 <!-- SEC2:START -->
 - 브랜치: `feature/<이니셜>-<작업>` (소문자, 하이픈). 예: `feature/a-text-utils`
+- 이슈가 있으면 이니셜 앞에 번호를 붙여도 된다. 예: `feature/12-a-login` (PR·이슈를 브랜치 이름으로 찾기 쉽다)
 - 커밋: `<type>: <무엇을 했는지>`. type 은 `feat`, `fix`, `docs`, `refactor`, `test`, `chore`
 - 제목은 50자 안팎, 명령형, 끝에 마침표 없음. 무엇을 바꿨는지 대상이 드러나야 한다.
 - 금지(의미 없는 메시지): `update`, `fix`, `temp`, `wip`, `final`, `bug fix`, `edit file`

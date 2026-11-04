@@ -71,7 +71,38 @@ $ git show --stat --oneline HEAD
 
 ## 시나리오 3. `git revert` — 원격에 push 된 커밋 취소 (임유현)
 <!-- REVERT:START -->
-(작성 예정)
+### 참여자
+- 임유현(@hauteville1862) — 실행·기록
+
+### 상황
+- 과제 범위에 없는 `docs/release-note-draft.md` 를 커밋하고 원격 브랜치에 push 했다. 리뷰어가 이미 브랜치를 받아 갔을 수 있다.
+
+### 시도한 명령/절차
+```text
+$ git log --oneline -2
+ba3d6b8 docs: add release note draft
+77792f9 docs: add branch strategy and commit convention to CONTRIBUTING
+# 릴리스 노트는 이 과제 범위가 아니라서 되돌린다. 이미 원격 브랜치에 push 했으므로 reset 대신 revert 한다.
+$ git revert --no-edit HEAD
+[feature/a-contributing-flow ba2f1d4] Revert "docs: add release note draft"
+ Date: Wed Nov 4 11:30:58 2026 +0900
+ 1 file changed, 3 deletions(-)
+ delete mode 100644 docs/release-note-draft.md
+$ git log --oneline -3
+ba2f1d4 Revert "docs: add release note draft"
+ba3d6b8 docs: add release note draft
+77792f9 docs: add branch strategy and commit convention to CONTRIBUTING
+$ git push origin feature/a-contributing-flow
+To https://github.com/hauteville1862/codyssey-b2-2.git
+   ba3d6b8..ba2f1d4  feature/a-contributing-flow -> feature/a-contributing-flow
+```
+
+### 결과
+- 원래 커밋은 남고, 그 변경을 지우는 새 커밋이 추가됐다. 강제 push 없이 일반 push 로 끝났다.
+
+### 왜 이 방법을 선택했는가
+- `reset` 으로 커밋을 지우면 원격과 히스토리가 달라져 강제 push 가 필요하고, 이미 받아 간 팀원 히스토리와 어긋난다.
+- `revert` 는 히스토리를 고치지 않고 되돌림을 기록으로 남기므로 공유 브랜치에서 안전하다.
 <!-- REVERT:END -->
 
 ## 시나리오 4. `git stash` / `git stash pop` — 작업 보관 후 전환 (박경내)

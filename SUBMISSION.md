@@ -24,5 +24,33 @@
 - PR 필수, 승인 1명 이상, 관리자 포함 적용: True
 - 직접 push 거절 증빙: [docs/git-log-graph.txt](docs/git-log-graph.txt) 하단
 
+## Review Evidence
+
+### 1. 리뷰 반영 기록 (본인 PR 에서 리뷰 코멘트를 반영한 증거)
+
+리뷰어가 인라인 코멘트로 변경을 요청하거나 제안하면, 작성자가 반영 커밋을 만들고 같은 스레드에 커밋 해시를 적어 답했다.
+
+| 팀원 | 내 PR | 받은 리뷰 코멘트 | 반영 커밋 | 내 답글 |
+|---|---|---|---|---|
+| 임유현(@hauteville1862) | [#2](https://github.com/hauteville1862/codyssey-b2-2/pull/2) | [@Rara-rookie 코멘트](https://github.com/hauteville1862/codyssey-b2-2/pull/2#discussion_r4462890644) | [`0bb7716`](https://github.com/hauteville1862/codyssey-b2-2/commit/0bb7716) | [답글](https://github.com/hauteville1862/codyssey-b2-2/pull/2#discussion_r4462891616) |
+| 임유현(@hauteville1862) | [#10](https://github.com/hauteville1862/codyssey-b2-2/pull/10) | [@Rara-rookie 코멘트](https://github.com/hauteville1862/codyssey-b2-2/pull/10#discussion_r4462896409) | [`14d4383`](https://github.com/hauteville1862/codyssey-b2-2/commit/14d4383) | [답글](https://github.com/hauteville1862/codyssey-b2-2/pull/10#discussion_r4462897550) |
+| 임유현(@hauteville1862) | [#14](https://github.com/hauteville1862/codyssey-b2-2/pull/14) | [@Rara-rookie 코멘트](https://github.com/hauteville1862/codyssey-b2-2/pull/14#discussion_r4462936103) | [`38ecf50`](https://github.com/hauteville1862/codyssey-b2-2/commit/38ecf50) | [답글](https://github.com/hauteville1862/codyssey-b2-2/pull/14#discussion_r4462938170) |
+| 이나현(@Rara-rookie) | [#6](https://github.com/hauteville1862/codyssey-b2-2/pull/6) | [@datecoco 코멘트](https://github.com/hauteville1862/codyssey-b2-2/pull/6#discussion_r4462889145) | [`bc2002a`](https://github.com/hauteville1862/codyssey-b2-2/commit/bc2002a) | [답글](https://github.com/hauteville1862/codyssey-b2-2/pull/6#discussion_r4462889871) |
+| 이나현(@Rara-rookie) | [#12](https://github.com/hauteville1862/codyssey-b2-2/pull/12) | [@datecoco 코멘트](https://github.com/hauteville1862/codyssey-b2-2/pull/12#discussion_r4462896365) | [`d87aae8`](https://github.com/hauteville1862/codyssey-b2-2/commit/d87aae8) | [답글](https://github.com/hauteville1862/codyssey-b2-2/pull/12#discussion_r4462898409) |
+| 박경내(@datecoco) | [#4](https://github.com/hauteville1862/codyssey-b2-2/pull/4) | [@hauteville1862 코멘트](https://github.com/hauteville1862/codyssey-b2-2/pull/4#discussion_r4462749816) | [`ff6bcda`](https://github.com/hauteville1862/codyssey-b2-2/commit/ff6bcda) | [답글](https://github.com/hauteville1862/codyssey-b2-2/pull/4#discussion_r4462751613) |
+| 박경내(@datecoco) | [#11](https://github.com/hauteville1862/codyssey-b2-2/pull/11) | [@hauteville1862 코멘트](https://github.com/hauteville1862/codyssey-b2-2/pull/11#discussion_r4462898072) | [`f100be6`](https://github.com/hauteville1862/codyssey-b2-2/commit/f100be6) | [답글](https://github.com/hauteville1862/codyssey-b2-2/pull/11#discussion_r4462899619) |
+
+### 2. 작성한 리뷰 (다른 사람 PR, 팀원별 2개 PR 이상)
+
+| 리뷰어 | 리뷰한 PR | 인라인 코멘트 | 첫 리뷰 | 승인 리뷰 |
+|---|---|---|---|---|
+| 임유현(@hauteville1862) | [#4](https://github.com/hauteville1862/codyssey-b2-2/pull/4) | [코멘트](https://github.com/hauteville1862/codyssey-b2-2/pull/4#discussion_r4462749816) | [변경 요청](https://github.com/hauteville1862/codyssey-b2-2/pull/4#pullrequestreview-5762212652) | [승인](https://github.com/hauteville1862/codyssey-b2-2/pull/4#pullrequestreview-5762216895) |
+| 임유현(@hauteville1862) | [#11](https://github.com/hauteville1862/codyssey-b2-2/pull/11) | [코멘트](https://github.com/hauteville1862/codyssey-b2-2/pull/11#discussion_r4462898072) | [코멘트 리뷰](https://github.com/hauteville1862/codyssey-b2-2/pull/11#pullrequestreview-5762390231) | [승인](https://github.com/hauteville1862/codyssey-b2-2/pull/11#pullrequestreview-5762434041) |
+| 이나현(@Rara-rookie) | [#2](https://github.com/hauteville1862/codyssey-b2-2/pull/2) | [코멘트](https://github.com/hauteville1862/codyssey-b2-2/pull/2#discussion_r4462890644) | [변경 요청](https://github.com/hauteville1862/codyssey-b2-2/pull/2#pullrequestreview-5762380355) | [승인](https://github.com/hauteville1862/codyssey-b2-2/pull/2#pullrequestreview-5762383838) |
+| 이나현(@Rara-rookie) | [#10](https://github.com/hauteville1862/codyssey-b2-2/pull/10) | [코멘트](https://github.com/hauteville1862/codyssey-b2-2/pull/10#discussion_r4462896409) | [코멘트 리뷰](https://github.com/hauteville1862/codyssey-b2-2/pull/10#pullrequestreview-5762387996) | [승인](https://github.com/hauteville1862/codyssey-b2-2/pull/10#pullrequestreview-5762391438) |
+| 이나현(@Rara-rookie) | [#14](https://github.com/hauteville1862/codyssey-b2-2/pull/14) | [코멘트](https://github.com/hauteville1862/codyssey-b2-2/pull/14#discussion_r4462936103) | [코멘트 리뷰](https://github.com/hauteville1862/codyssey-b2-2/pull/14#pullrequestreview-5762437797) | [승인](https://github.com/hauteville1862/codyssey-b2-2/pull/14#pullrequestreview-5762441335) |
+| 박경내(@datecoco) | [#6](https://github.com/hauteville1862/codyssey-b2-2/pull/6) | [코멘트](https://github.com/hauteville1862/codyssey-b2-2/pull/6#discussion_r4462889145) | [변경 요청](https://github.com/hauteville1862/codyssey-b2-2/pull/6#pullrequestreview-5762378600) | [승인](https://github.com/hauteville1862/codyssey-b2-2/pull/6#pullrequestreview-5762381676) |
+| 박경내(@datecoco) | [#12](https://github.com/hauteville1862/codyssey-b2-2/pull/12) | [코멘트](https://github.com/hauteville1862/codyssey-b2-2/pull/12#discussion_r4462896365) | [코멘트 리뷰](https://github.com/hauteville1862/codyssey-b2-2/pull/12#pullrequestreview-5762387919) | [승인](https://github.com/hauteville1862/codyssey-b2-2/pull/12#pullrequestreview-5762394697) |
+
 ## Evidence
 - git log --oneline --graph --all: [docs/git-log-graph.txt](docs/git-log-graph.txt)

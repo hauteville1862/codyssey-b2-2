@@ -1,0 +1,60 @@
+$ git log --oneline --graph --all
+* 38cf696 docs: add submission index, history graph and CODEOWNERS
+*   c579e1f Merge pull request #11 from hauteville1862/feature/c-contributing-conflict
+|\  
+| * 6fb313e docs: record conflict #2 resolution
+| *   607e88f fix: resolve merge conflict with main in docs/reference/glossary.md
+| |\  
+| |/  
+|/|   
+* |   1640ad2 Merge pull request #12 from hauteville1862/feature/b-contributing-review
+|\ \  
+| * \   82b1c4c Merge branch 'main' into feature/b-contributing-review
+| |\ \  
+| |/ /  
+|/| |   
+* | |   8aa3ea8 Merge pull request #10 from hauteville1862/feature/a-contributing-flow
+|\ \ \  
+| * | | 14d4383 docs: allow issue number prefix in branch names
+| * | | df0308e docs: record revert scenario in troubleshooting log
+| * | | ba2f1d4 Revert "docs: add release note draft"
+| * | | ba3d6b8 docs: add release note draft
+| * | | 77792f9 docs: add branch strategy and commit convention to CONTRIBUTING
+|/ / /  
+| * | d87aae8 docs: add review response time rule
+| * | 69d403c docs: record rebase cleanup before push
+| * | 0f16c3d docs: add review checklist and refine PR definition
+| * | 8d458be docs: add PR rules to CONTRIBUTING
+|/ /  
+| * f100be6 docs: add review re-request step to conflict flow
+| * aa60a75 refactor: move glossary to docs/reference and link issues in PR definition
+| * c5c78d4 docs: add conflict handling flow to CONTRIBUTING
+|/  
+*   1a81dfe Merge pull request #2 from hauteville1862/feature/a-text-utils
+|\  
+| * 0bb7716 fix: reject non-positive limit in truncate
+| * 2cb42c7 docs: record commit --amend scenario in troubleshooting log
+| * db980ad feat: add text utils slugify and truncate
+* |   d24b4d1 Merge pull request #6 from hauteville1862/feature/b-math-utils
+|\ \  
+| * | bc2002a fix: raise ValueError for empty input in mean
+| * | 0f18c7a docs: record reset --soft scenario in troubleshooting log
+| * | 60c01b0 feat: add math utils clamp and mean
+|/ /  
+* |   2ae66a9 Merge pull request #4 from hauteville1862/feature/c-date-utils
+|\ \  
+| |/  
+|/|   
+| * ff6bcda fix: return absolute day count in days_between
+| * 2569415 docs: record stash scenario in troubleshooting log
+| * b3fe3f3 feat: add date utils days_between and is_weekend
+|/  
+* fb8d588 chore: initialize repository structure and collaboration docs
+
+$ git push origin HEAD:main   # 보호 규칙 확인용 빈 커밋
+remote: error: GH006: Protected branch update failed for refs/heads/main.        
+remote: 
+remote: - Changes must be made through a pull request.        
+To https://github.com/hauteville1862/codyssey-b2-2.git
+ ! [remote rejected] HEAD -> main (protected branch hook declined)
+error: failed to push some refs to 'https://github.com/hauteville1862/codyssey-b2-2.git'

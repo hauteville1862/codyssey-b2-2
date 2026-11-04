@@ -5,6 +5,16 @@
 - 저장소: https://github.com/hauteville1862/codyssey-b2-2
 - 팀원: 임유현(@hauteville1862), 이나현(@Rara-rookie), 박경내(@datecoco)
 
+## Repository Setup
+- 방식: 옵션 A (GitHub Organization `<org>` 의 저장소)   ← 개인 저장소면 옵션 B
+- 저장소: https://github.com/<org>/<repo> (public)
+- 팀 단위 저장소 1개, 팀원 3명 모두 push 권한
+| 팀원 | GitHub | 권한 |
+|---|---|---|
+| 임유현 | @hauteville1862 | admin(저장소 생성·보호 규칙) |
+| 이나현 | @Rara-rookie | write(Collaborator) |
+| 박경내 | @datecoco | write(Collaborator) |
+
 ## Member Contributions
 
 | 팀원 | 만든 이슈 | 만든 PR(병합) | 다른 사람 PR 리뷰 |

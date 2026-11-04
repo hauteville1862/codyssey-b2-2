@@ -9,7 +9,41 @@
 
 ## 시나리오 2. `git reset --soft HEAD~1` — 로컬 커밋 취소, 변경 유지 (이나현)
 <!-- RESET:START -->
-(작성 예정)
+### 참여자
+- 이나현(@Rara-rookie) — 실행·기록
+
+### 상황
+- `src/math_utils.py` 를 커밋하면서 실수로 디버그용 `src/debug_scratch.py` 까지 넣었다. 아직 push 전이다.
+
+### 시도한 명령/절차
+```text
+$ git add src/math_utils.py src/debug_scratch.py
+$ git commit -q -m feat: add math utils clamp and mean
+$ git show --stat --oneline HEAD
+9a8ad12 feat: add math utils clamp and mean
+ src/debug_scratch.py |  1 +
+ src/math_utils.py    | 19 +++++++++++++++++++
+ 2 files changed, 20 insertions(+)
+# 디버그용 파일까지 함께 커밋했다. push 전이므로 커밋만 취소하고 변경은 스테이징에 남긴다.
+$ git reset --soft HEAD~1
+$ git status --short
+A  src/debug_scratch.py
+A  src/math_utils.py
+$ git restore --staged src/debug_scratch.py
+$ rm src/debug_scratch.py
+$ git commit -q -m feat: add math utils clamp and mean
+$ git show --stat --oneline HEAD
+60c01b0 feat: add math utils clamp and mean
+ src/math_utils.py | 19 +++++++++++++++++++
+ 1 file changed, 19 insertions(+)
+```
+
+### 결과
+- 잘못된 커밋은 없어지고 변경은 스테이징에 그대로 남았다. 디버그 파일만 빼고 다시 커밋했다.
+- 주의: `reset` 은 브랜치 포인터를 뒤로 옮기는 히스토리 재작성이다. push 한 커밋에는 쓰지 않는다.
+
+### 왜 이 방법을 선택했는가
+- `--soft` 는 작업 내용을 잃지 않는다(`--hard` 는 변경까지 버린다). 커밋 구성만 다시 하면 되는 상황에 맞다.
 <!-- RESET:END -->
 
 ## 시나리오 3. `git revert` — 원격에 push 된 커밋 취소 (임유현)
